@@ -402,7 +402,7 @@ if __name__ == '__main__':
     parser.add_argument("--key_word", type=str, default='reinforcement learning', help="the key word of user research fields")
     parser.add_argument("--filter_keys", type=str, default='ChatGPT robot', help="the filter key words, 摘要中每个单词都得有，才会被筛选为目标论文")
     parser.add_argument("--max_results", type=int, default=1, help="the maximum number of results")
-    parser.add_argument("--sort", default=arxiv.SortCriterion.Relevance, help="another is arxiv.SortCriterion.LastUpdatedDate")    
+    parser.add_argument("--sort", default=arxiv.SortCriterion.Relevance,type=arxiv.SortCriterion, help="another is lastUpdatedDate or submittedDate")   
     parser.add_argument("--save_image", default=False, help="save image? It takes a minute or two to save a picture! But pretty")
     parser.add_argument("--file_format", type=str, default='md', help="导出的文件格式，如果存图片的话，最好是md，如果不是的话，txt的不会乱")
     
