@@ -17,11 +17,12 @@ To keep up with the huge arxiv papers and AI’s fast progress, we humans need t
 > [私有化部署](./deploy/Private/README.md) 、公共化部署，我们推荐您直接使用Hugging Face [在线体验](https://huggingface.co/spaces/wangrongsheng/ChatPaper) 。
 
 ## TODO list:
-1. 将提问换成英文
-2. 用更加鲁棒的方法解析Method章节
-3. 打包成exe文件，供小白用户直接使用。
-4. 如果有佬愿意搭建网站，也可以合作
-5. 实现一个ChatReview版本，供大家审稿的时候参考（但可能有学术伦理问题）
+1. 将提问换成英文--已经完成
+2. 用更加鲁棒的方法解析Method章节--使用交互模式，来判断
+3. 打包成exe文件，供小白用户直接使用。--放弃这个功能，全力打造网页版
+4. 如果有佬愿意搭建网站，也可以合作--已经合作
+5. 实现一个ChatReview版本，供大家审稿的时候参考（但可能有学术伦理问题）--正在尝试
+6. 其他的优化功能正在添加：本地PDF批量总结；token的自动评估；
 
 ## 动机
 
@@ -65,14 +66,14 @@ python版本最好是3.9，其他版本应该也没啥问题
 1. 在apikey.ini中填入你的openai key。注意，这个代码纯本地项目，你的key很安全！如果不被OpenAI封的话~
 小白用户比较多，我直接给截图示意下可能会更好：
 <div style="text-align: center;">
-  <img src=https://user-images.githubusercontent.com/28528386/224497146-f5518553-04a2-4efa-90e6-4ac0febb8177.png width="200" height="250"/>
+  <img src=https://user-images.githubusercontent.com/28528386/224497146-f5518553-04a2-4efa-90e6-4ac0febb8177.png width="500" height="220"/>
 </div>
 
 2. 使用过程要保证全局代理！
 如果客户端时clash的话，可以参考这个进行配置:
 
 <div style="text-align: center;">
-  <img src=https://user-images.githubusercontent.com/28528386/224529317-f49265d7-fb5f-4dd5-b462-930aaa0c682d.png width="200" height="250"/>
+  <img src=https://user-images.githubusercontent.com/28528386/224529317-f49265d7-fb5f-4dd5-b462-930aaa0c682d.png width="500" height="350"/>
 </div>
 
 3. 安装依赖：最好翻墙，或者用国内源。
@@ -90,6 +91,11 @@ B站讲解视频：[我把ChatPaper开源了！AI速读PDF论文和速通Arxiv�
 
 **注意：key_word不重要，但是filter_keys非常重要！**
 一定要修改成你的关键词。
+
+另外关于arxiv的搜索关键词可以参考下图：
+<div style="text-align: center;">
+  <img src=https://user-images.githubusercontent.com/28528386/224550698-f0e18bf7-f09f-40a1-a747-1d596b3edd01.png width="250" height="350"/>
+</div>
 
 5. 参数介绍：
 ``
